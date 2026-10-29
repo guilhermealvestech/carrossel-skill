@@ -2,7 +2,7 @@
 
 O Claude não gera imagem. Monte o prompt e o usuário gera no Codex (que salva direto na pasta do projeto) ou no ChatGPT. Quem aprova é sempre o usuário.
 
-**Image gen é só para assets**: um objeto ou uma composição com ambiente. Nunca a peça pronta (texto, layout e marca são feitos em HTML) e nunca pessoa real.
+**Image gen é só para assets**: um objeto ou uma composição com ambiente. Nunca a peça pronta (texto, layout e marca são feitos em HTML) e nunca pessoa real (personagem estilizado sem rosto pode).
 
 ## 1. Antes de gerar, descartar nesta ordem
 1. Print ou markup real do produto.
@@ -15,9 +15,17 @@ O Claude não gera imagem. Monte o prompt e o usuário gera no Codex (que salva 
 | Objeto | metáfora num slide | transparente |
 | Personagem | pessoa em situação, sem rosto | transparente |
 | Cena | capa com contexto, área livre para título | cheio, 4:5 |
+| Cenário | personagem dentro do ambiente, a série inteira | cheio, 4:5 |
 | Ícone | chips e listas, legível em 64px | transparente |
 
 O estilo padrão recomendado é **3D editorial fosco**: consistente, sem cara de banco de imagem e fácil de manter em série. Objeto realista (fotográfico) só em caso bem específico, quando o tema pede aquele objeto real.
+
+### Cenário (cena com personagem)
+Quando o roteiro é uma situação vivida, o asset é a **cena inteira**: personagem sem rosto dentro do ambiente, gerado de uma vez (nunca personagem e cenário separados para montar depois). Conceito ou metáfora continua com objeto.
+- Texto no terço superior; cena embaixo, de borda a borda, sem card.
+- Uma cena por série: mesmo personagem, set e luz. Muda enquadramento, pose e objetos, e o ambiente acompanha o texto.
+- A primeira cena aprovada é a âncora das seguintes.
+- Pessoa real nunca; personagem estilizado pode.
 
 ## 3. Anatomia do prompt
 Uma linha por bloco, nesta ordem:
@@ -51,5 +59,6 @@ Não incluir: texto, letras, logos, rostos, brilho glossy, cromado, neon, sparkl
 ```
 Personagem: acrescente "pessoa sem traços faciais, proporções levemente estilizadas, roupa nas cores da marca, pose que mostra [AÇÃO]".
 Cena: troque o fundo por "fundo cheio claro, proporção 4:5, área livre no terço superior para o título".
+Cenário: "Crie uma cena 3D: [PERSONAGEM] [AÇÃO] em [AMBIENTE], com [OBJETOS QUE CONTAM A HISTÓRIA]. Personagem sem traços faciais, roupa nas cores da marca. Siga o personagem, o ambiente e a luz da imagem anexada. 4:5, terço superior livre, cena encostando nas bordas laterais e inferior."
 
 No Codex, peça também: "salve em carrosseis/assets/3d/<serie>/NN-nome.png e me mostre".
