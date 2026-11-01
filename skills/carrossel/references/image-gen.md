@@ -20,6 +20,8 @@ O Claude não gera imagem. Monte o prompt e o usuário gera no Codex (que salva 
 
 O estilo padrão recomendado é **3D editorial fosco**: consistente, sem cara de banco de imagem e fácil de manter em série. Objeto realista (fotográfico) só em caso bem específico, quando o tema pede aquele objeto real.
 
+**Prompt para o Codex: o mais simples possível.** Ele já tem o contexto da marca (estilo, paleta, personagem, pastas). Descreva só a cena e o que ela conta, em 1 a 3 frases. Os modelos completos abaixo servem para ferramentas sem contexto (chat avulso).
+
 ### Cenário (cena com personagem)
 Quando o roteiro é uma situação vivida, o asset é a **cena inteira**: personagem sem rosto dentro do ambiente, gerado de uma vez (nunca personagem e cenário separados para montar depois). Conceito ou metáfora continua com objeto.
 - Texto no terço superior; cena embaixo, de borda a borda, sem card.
